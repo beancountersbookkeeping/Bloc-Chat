@@ -8,8 +8,8 @@
          $stateProvider
          .state('home', {
              url: '/',
-             controller: 'home'
-             templateUrl: '/templates/home.html'
+             controller: 'Room'
+             templateUrl: 'templates/home.html'
          })
 
      }

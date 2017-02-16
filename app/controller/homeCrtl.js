@@ -1,5 +1,5 @@
 (function(){
-    function homeCtrl($scope, room){
+    function homeCtrl(room){
         $scope.rooms = room.all;
         
     }

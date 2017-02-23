@@ -12,14 +12,14 @@
              templateUrl: '/templates/home.html'
          })
          
-         .state('modal', {
-             url: '/',
-             controller: 'modalCtrl as modal'            
-         })
+        //  .state('modal', {
+        //      url: '/',
+        //      controller: 'modalCtrl as modal'            
+        //  })
 
      }
  
      angular
-         .module('blocChat', ['ui.router','firebase','$uibModal'])
+         .module('blocChat', ['ui.router', 'firebase', 'ui.bootstrap'])
          .config(config);
  })();

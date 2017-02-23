@@ -1,13 +1,15 @@
 (function(){
-    function modalCtrl(){
-        var newRoom = {
-            center
-        }
+    function modalCtrl($scope, $uibModalInstance){
+        // var newRoom = {
+        //     center
+        // }
       
-        
+        $scope.cancel = function() {
+            console.log('dismiss the modal');
+        };
     }
     angular
         .module('blocChat')
-        .controller('modalCtrl', ['$scope', modalCtrl]);
+        .controller('modalCtrl', ['$scope', '$uibModalInstance', modalCtrl]);
     
 }) ();

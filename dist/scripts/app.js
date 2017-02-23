@@ -11,10 +11,12 @@
              controller: 'homeCtrl as home',
              templateUrl: '/templates/home.html'
          })
+         
+         
 
      }
  
      angular
-         .module('blocChat', ['ui.router','firebase'])
+         .module('blocChat', ['ui.router','firebase','$uibModal'])
          .config(config);
  })();

@@ -11,11 +11,6 @@
              controller: 'homeCtrl as home',
              templateUrl: '/templates/home.html'
          })
-         
-        //  .state('modal', {
-        //      url: '/',
-        //      controller: 'modalCtrl as modal'            
-        //  })
 
      }
  

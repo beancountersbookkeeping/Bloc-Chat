@@ -2,19 +2,19 @@
   function Room($firebaseArray) {
     var ref = firebase.database().ref().child("rooms");
     var rooms = $firebaseArray(ref);
-    
-    function create(name) {
-        var list = $firebaseArray(ref);
-        return list.$add(name).then(function(ref) {
-            console.log("added record with id " + name);
+
+    var createRoom = function(name) {
+        return rooms.$add({name: name}).then(function(ref) {
+            
+            // var id = ref.key();
+            // console.log("added record with id " + id);
+            // return rooms.$indexFor(id); // returns location in the array
         });
-        
     }
-      
 
     return {
       all: rooms,
-      create: create
+      create: createRoom
     };
   }
 
@@ -22,3 +22,4 @@
     .module('blocChat')
     .factory('Room', ['$firebaseArray', Room]);
 })();
+

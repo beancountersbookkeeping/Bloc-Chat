@@ -6,15 +6,14 @@
     var createRoom = function(name) {
         return rooms.$add({name: name}).then(function(ref) {
             
-            // var id = ref.key();
-            // console.log("added record with id " + id);
-            // return rooms.$indexFor(id); // returns location in the array
+           
         });
     }
 
     return {
       all: rooms,
       create: createRoom
+        
     };
   }
 

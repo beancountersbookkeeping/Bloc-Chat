@@ -5,8 +5,6 @@
 
     var createRoom = function(name) {
         return rooms.$add({name: name}).then(function(ref) {
-            
-           
         });
     }
 

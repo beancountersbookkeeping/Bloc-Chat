@@ -1,5 +1,5 @@
 <h1>Bloc Chat</h1>
 <div ng-repeat='room in rooms'>
-    <div onclick="Message(room.name)">{{room.name}}</div> 
+    <a ui-sref="room({roomId: room.$id})">{{ room.name }}</a>
 </div>
 <button ng-click="launchModal()">New Room</button>

@@ -5,10 +5,7 @@
 
     return {
        getByRoomID: function (roomId) {
-           return messages;
-        //    return ref.orderByChild('roomID').equalTo('roomID').on('roomID',function(snapshot){
-        //        console.log(snapshot.key);
-        //    })
+          return $firebaseArray(ref.child(roomId));
        },
         all: messages,
         create: function(name, newMessage, roomID) {

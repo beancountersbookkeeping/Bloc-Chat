@@ -1,10 +1,9 @@
-<h1>{{ test }}</h1>
+<h1>Bloc Chat</h1>
 <div ng-repeat='room in rooms'>
     <a ui-sref="room({roomId: room.$id})">{{ room.name }}</a>
 </div>
-    <p> {{room.name }}</p>
-<h4>{{ roomId }}</h4>
-<h4>{{ name }}</h4>
-<h4> {{ rooms | json }}</h4>
-<p>{{ messages | json }}</p>
-<p>{{ messages.content }}</p>
+<br>
+<h4>{{currentRoom.name}}</h4>
+<div ng-repeat="message in messages">
+  <p>{{ message.content }}</p>
+</div>

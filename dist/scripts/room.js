@@ -6,12 +6,16 @@
     var createRoom = function(name) {
         return rooms.$add({name: name}).then(function(ref) {
         });
-    }
+    };
+
+    var getRoom = function(id) {
+      return rooms.$getRecord(id);
+    };
 
     return {
       all: rooms,
-      create: createRoom
-        
+      create: createRoom,
+      get: getRoom
     };
   }
 

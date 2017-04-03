@@ -1,5 +1,12 @@
 .sidebar {
-    background-color: lightgrey;
-    width: 25%; 
-    height: 1000px;
+    background-color: lightgray;
+}
+
+body {
+    background-color: darkgray;
+}
+.chat { 
+    background-color: slategray;  
+    padding: 50px; 
+  
 }

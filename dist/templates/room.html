@@ -6,7 +6,7 @@
 <h4>{{currentRoom.name}}</h4>
 <div class="chat" ng-repeat="message in messages">
   <p>{{ message.content }}</p>
-    <input type="text" name="newmessage" value="New Message">
-    <button ng-click="launchModal()">Submit</button>
-    <p>{{ newmessage}}</p>
+    <input type="text" name="newmessage" ng-model="submittedmessage" >
+    <p> {{submittedmessage}}</p>
+    <button ng-click="newMessage()">Submit</button>
 </div>

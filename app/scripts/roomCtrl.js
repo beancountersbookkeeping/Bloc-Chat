@@ -5,7 +5,12 @@
         $scope.currentRoom = Room.get($scope.roomId);
 
         $scope.messages = Message.getByRoomID($scope.roomId);
-
+        
+        $scope.newMessage = function (){
+                console.log($scope.submittedmessage);
+        };
+                                                   
+        
     }
     angular
         .module('blocChat')

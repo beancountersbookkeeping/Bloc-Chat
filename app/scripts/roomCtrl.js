@@ -4,10 +4,11 @@
         $scope.roomId = $state.params.roomId;
         $scope.currentRoom = Room.get($scope.roomId);
 
-        $scope.messages = Message.getByRoomID($scope.roomId);
+        $scope.messages = Message.all;
         
-        $scope.newMessage = function (){
-                console.log($scope.submittedmessage);
+        $scope.newMessage = function (message){
+            console.log(message);
+            Message.create('ben', message, $scope.roomId);
         };
                                                    
         

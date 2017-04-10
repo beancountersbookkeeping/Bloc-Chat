@@ -8,12 +8,12 @@
           return $firebaseArray(ref.child(roomId));
        },
         all: messages,
-        create: function(name, newMessage, roomID) {
+        create: function(name, newMessage, roomId) {
             messages.$add({
 				username: name,
 				content: newMessage,
-                sentAt: Firebase.ServerValue.TIMESTAMP,
-                roomId: roomID
+                sentAt: firebase.database.ServerValue.TIMESTAMP,
+                roomId: roomId
             });
         }
     }

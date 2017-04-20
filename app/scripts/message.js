@@ -5,17 +5,18 @@
 
     return {
        getByRoomID: function (roomId) {
-          return $firebaseArray(ref.child(roomId));
+           var orderQuery = ref.orderByChild('roomId').equalTo(roomId);
+           return $firebaseArray(orderQuery);
        },
-        all: messages,
-        create: function(name, newMessage, roomId) {
+       all: messages,
+       create: function(name, newMessage, roomId) {
             messages.$add({
 				username: name,
 				content: newMessage,
                 sentAt: firebase.database.ServerValue.TIMESTAMP,
                 roomId: roomId
             });
-        }
+       }
     }
   }
         

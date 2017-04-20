@@ -4,7 +4,7 @@
         $scope.roomId = $state.params.roomId;
         $scope.currentRoom = Room.get($scope.roomId);
 
-        $scope.messages = Message.all;
+        $scope.messages = Message.getByRoomID($scope.roomId);
         
         $scope.newMessage = function (message){
             console.log(message);

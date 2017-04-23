@@ -8,7 +8,7 @@
         
         $scope.newMessage = function (message){
             console.log(message);
-            Message.create('ben', message, $scope.roomId);
+            Message.create($scope.username, message, $scope.roomId);
         };
                                                    
         

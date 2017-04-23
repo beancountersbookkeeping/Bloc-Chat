@@ -18,8 +18,20 @@
          })
 
      }
+    
+    function BlocChatCookies($cookies, $uibModal) {
+        var currentUser = $cookies.get('blocChatCurrentUser');
+        if (!currentUser || currentUser === '') {
+            $uibModal.open({
+                controller: 'usernameCtrl as username_modal',
+                templateUrl: '/templates/username_modal.html'
+                
+            })
+        }
+    }
  
      angular
-         .module('blocChat', ['ui.router', 'firebase', 'ui.bootstrap'])
-         .config(config);
+         .module('blocChat', ['ui.router', 'firebase', 'ui.bootstrap','ngCookies'])
+         .config(config)
+         .run(['$cookies', '$uibModal', BlocChatCookies]);
  })();

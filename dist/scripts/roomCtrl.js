@@ -1,5 +1,5 @@
 (function(){
-    function roomCtrl($scope, Room, $state, Message){
+    function roomCtrl($scope, Room, $state, Message, $cookies){
         $scope.rooms = Room.all;
         $scope.roomId = $state.params.roomId;
         $scope.currentRoom = Room.get($scope.roomId);
@@ -8,13 +8,13 @@
         
         $scope.newMessage = function (message){
             console.log(message);
-            Message.create($scope.username, message, $scope.roomId);
+            Message.create($cookies.get('blocChatCurrentUser'), message, $scope.roomId);
         };
                                                    
         
     }
     angular
         .module('blocChat')
-        .controller('roomCtrl', ['$scope','Room', '$state', 'Message', roomCtrl]);
+        .controller('roomCtrl', ['$scope','Room', '$state', 'Message', '$cookies', roomCtrl]);
     
 }) ();
